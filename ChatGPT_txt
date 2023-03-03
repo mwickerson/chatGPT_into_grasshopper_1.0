@@ -1,0 +1,12 @@
+
+
+def random_rectangle(xmin, xmax, ymin, ymax):
+    import rhinoscriptsyntax as rs
+    import random
+    x = random.uniform(xmin, xmax)
+    y = random.uniform(ymin, ymax)
+    z = 0
+    width = random.uniform(0, xmax - xmin)
+    height = random.uniform(0, ymax - ymin)
+    rect = rs.AddRectangle(rs.CreatePoint(x, y, z), width, height)
+    return rect
